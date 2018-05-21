@@ -1,0 +1,2 @@
+module SingerHelper
+end
