@@ -38,6 +38,7 @@
       }
       return false;
    });
+   
 
    function visibleSubMenuClose() {
       jQuery('.menu-list').each(function() {
@@ -64,6 +65,7 @@
       jQuery(this).removeClass('nav-hover');
    });
 
+   
 
    // Menu Toggle
    jQuery('.toggle-btn').click(function(){
@@ -135,8 +137,55 @@
 						    ev.stopImmediatePropagation();
 						    $(".dropdown-toggle").dropdown("active");
 						  });
-						});
-						
+                        });
+                        
+                        $(document).ready(function() {
+                            $(".all_vietnam").hide();
+                            $(".all_hanquoc").hide();
+                            $(".all_aumy").hide();
+                            $("#seeall_vietnam").click(function(){
+                                $(".all_vietnam").toggle();
+                                $(".top_vietnam").toggle();
+                                $("#hanquoc_albums").toggle();
+                                $("#aumy_albums").toggle();
+                            });
+                            $("#seeall_hanquoc").click(function(){
+                                $(".all_hanquoc").toggle();
+                                $(".top_hanquoc").toggle();
+                                $("#vietnam_albums").toggle();
+                                $("#aumy_albums").toggle();
+                            });
+                            $("#seeall_aumy").click(function(){
+                                $(".all_aumy").toggle();
+                                $(".top_aumy").toggle();
+                                $("#hanquoc_albums").toggle();
+                                $("#vietnam_albums").toggle();
+                            });
+                        })
+                        
+                        $(document).ready(function() {
+                            $(".all-artist-vn").hide();
+                            $(".all-artist-hq").hide();
+                            $(".all-artist-us").hide();
+                            $("#artistall_vietnam").click(function(){
+                                $(".all-artist-vn").toggle();
+                                $(".top-artist-vn").toggle();
+                                $("#hq-artist").toggle();
+                                $("#us-artist").toggle();
+                            });
+                            $("#artistall_hanquoc").click(function(){
+                                $(".all-artist-hq").toggle();
+                                $(".top-artist-hq").toggle();
+                                $("#vn-artist").toggle();
+                                $("#us-artist").toggle();
+                            });
+                            $("#artistall_aumy").click(function(){
+                                $(".all-artist-us").toggle();
+                                $(".top-artist-us").toggle();
+                                $("#hq-artist").toggle();
+                                $("#vn-artist").toggle();
+                            });
+                        })
 	
      
   /************** Search ****************/

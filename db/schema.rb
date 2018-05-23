@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_21_052450) do
+ActiveRecord::Schema.define(version: 2018_05_23_102756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,15 +21,28 @@ ActiveRecord::Schema.define(version: 2018_05_21_052450) do
     t.string "issue"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "country_id"
+    t.index ["country_id"], name: "index_albums_on_country_id"
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "story"
+    t.string "birthday"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "country_id"
+    t.index ["country_id"], name: "index_artists_on_country_id"
   end
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
     t.datetime "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.bigint "song_id"
     t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["song_id"], name: "index_comments_on_song_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
@@ -43,39 +56,21 @@ ActiveRecord::Schema.define(version: 2018_05_21_052450) do
   create_table "histories", force: :cascade do |t|
     t.string "action"
     t.string "object"
+    t.datetime "time"
+    t.bigint "user_id"
+    t.bigint "song_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
+    t.index ["song_id"], name: "index_histories_on_song_id"
     t.index ["user_id"], name: "index_histories_on_user_id"
   end
 
   create_table "kinds", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "musicians", force: :cascade do |t|
-    t.string "name"
     t.string "image"
-    t.string "story"
-    t.datetime "birthday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "country_id"
-    t.index ["country_id"], name: "index_musicians_on_country_id"
-  end
-
-  create_table "singers", force: :cascade do |t|
-    t.string "name"
-    t.string "image"
-    t.string "story"
-    t.datetime "birthday"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "country_id"
-    t.index ["country_id"], name: "index_singers_on_country_id"
   end
 
   create_table "songs", force: :cascade do |t|
@@ -86,17 +81,15 @@ ActiveRecord::Schema.define(version: 2018_05_21_052450) do
     t.integer "view"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "singer_id"
-    t.bigint "musician_id"
+    t.bigint "artist_id"
     t.bigint "kind_id"
     t.bigint "country_id"
     t.bigint "album_id"
     t.bigint "user_id"
     t.index ["album_id"], name: "index_songs_on_album_id"
+    t.index ["artist_id"], name: "index_songs_on_artist_id"
     t.index ["country_id"], name: "index_songs_on_country_id"
     t.index ["kind_id"], name: "index_songs_on_kind_id"
-    t.index ["musician_id"], name: "index_songs_on_musician_id"
-    t.index ["singer_id"], name: "index_songs_on_singer_id"
     t.index ["user_id"], name: "index_songs_on_user_id"
   end
 
@@ -105,17 +98,19 @@ ActiveRecord::Schema.define(version: 2018_05_21_052450) do
     t.string "password"
     t.string "display_name"
     t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "albums", "countries"
+  add_foreign_key "artists", "countries"
   add_foreign_key "comments", "songs"
   add_foreign_key "comments", "users"
+  add_foreign_key "histories", "songs"
   add_foreign_key "histories", "users"
-  add_foreign_key "musicians", "countries"
-  add_foreign_key "singers", "countries"
   add_foreign_key "songs", "albums"
+  add_foreign_key "songs", "artists"
   add_foreign_key "songs", "countries"
   add_foreign_key "songs", "kinds"
-  add_foreign_key "songs", "musicians"
-  add_foreign_key "songs", "singers"
   add_foreign_key "songs", "users"
 end

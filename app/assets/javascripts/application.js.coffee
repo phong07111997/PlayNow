@@ -19,36 +19,38 @@
 #= require bootstrap
 
 #= require easyResponsiveTabs
-
+#= require jsalbums
 
 new UISearch( document.getElementById( 'sb-search' ) )
 
 $(document).ready( () ->
     $('#audio-player').mediaelementplayer({
-    alwaysShowControls: true,
-    features: ['playpause','progress','volume'],
-    audioVolume: 'horizontal',
-    iPadUseNativeControls: true,
-    iPhoneUseNativeControls: true,
-    AndroidUseNativeControls: true
+        alwaysShowControls: true,
+        audioVolume: 'horizontal',
+        iPadUseNativeControls: true,
+        iPhoneUseNativeControls: true,
+        AndroidUseNativeControls: true
     })
 )
+
+
+    
 
 
 $( ->
 
     $("#slider4").responsiveSlides({
-    auto: true,
-    pager:true,
-    nav:true,
-    speed: 500,
-    namespace: "callbacks",
-    before:  () ->
-        $('.events').append("<li>before event fired.</li>")
-    ,
-    after:  () ->
-        $('.events').append("<li>after event fired.</li>")
-    })
+        auto: true,
+        pager:true,
+        nav:true,
+        speed: 500,
+        namespace: "callbacks",
+        before:  () ->
+            $('.events').append("<li>before event fired.</li>")
+        ,
+        after:  () ->
+            $('.events').append("<li>after event fired.</li>")
+        })
 )
 
 $(document).ready( ->

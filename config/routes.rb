@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   resources :browse
   resources :dashboard
   resources :blog
+  resources :chart
+  resources :artist
+  resources :kind
 
 end

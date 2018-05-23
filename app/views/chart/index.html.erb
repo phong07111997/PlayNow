@@ -1,0 +1,120 @@
+
+
+		
+
+<div id="page-wrapper">
+	<div class="inner-content">
+		<div class="music-browse">
+		<!--albums-->
+		<!-- pop-up-box --> 
+							
+		<!--//pop-up-box -->
+			<div class="review-slider">
+                <div class="chart-table">
+                    <div class="col-4 chart-column">
+                        <div class="tittle-head">
+						    <h3 class="tittle">VIỆT NAM <span class="new">HOT</span></h3>
+						    <div class="clearfix"> </div>
+					    </div>
+                        <ul>
+                            <%
+								i = 0
+								j = 0
+                                while i < @songs.length && j < 10
+									i = i + 1
+									if @songs.find(i).country_id == 1
+                                    	value = @songs.find(i).artist_id;
+                            %>
+                            <li> 
+                                <div class="chart-image">
+                                    <img  src="<%=@singers.find(value).image%>">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="chart-name">
+                                    <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <p><%=@singers.find(value).name%></p>
+									<h2><%=j+1%></h2>
+                                </div>
+                            </li>
+							<%	
+										j = j + 1
+									end 
+                                end
+                            %>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-4 chart-column">
+                        <div class="tittle-head">
+						    <h3 class="tittle">HÀN QUỐC <span class="new">HOT</span></h3>
+						    <div class="clearfix"> </div>
+					    </div>
+                        <ul>
+                            <%
+								i = 0
+								j = 0
+                                while i < @songs.length && j < 10
+									i = i + 1
+									if @songs.find(i).country_id == 2
+                                   		value = @songs.find(i).artist_id;
+                            %>
+                            <li> 
+                                <div class="chart-image">
+                                    
+                                    <img  src="<%=@singers.find(value).image%>">
+                                </div>
+                                <div class="chart-name">
+                                    <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <p><%=@singers.find(value).name%></p>
+									<h2><%=j+1%></h2>
+                                </div>
+                            </li>
+                            <%
+										j = j + 1
+									end
+                                end
+                            %>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-4 chart-column">
+                        <div class="tittle-head">
+						    <h3 class="tittle">US-UK <span class="new">HOT</span></h3>
+						    <div class="clearfix"> </div>
+					    </div>
+                        <ul>
+                            <%
+								i = 0
+								j = 0
+                                while i < @songs.length && j < 10
+									i = i + 1
+									if @songs.find(i).country_id == 3
+                                    	value = @songs.find(i).artist_id;
+                            %>
+                            <li> 
+                                <div class="chart-image">
+                                    <img  src="<%=@singers.find(value).image%>">
+                                </div>
+                                <div class="chart-name">
+                                    <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <p><%=@singers.find(value).name%></p>
+									<h2><%=j+1%></h2>
+                                </div>
+                            </li>
+                            <%
+										j = j + 1
+									end
+                                end
+                            %>
+                            
+                        </ul>
+                    </div>
+                </div>  
+					
+			</div>
+			<div class="clearfix"></div>
+		</div>
+    </div>
+</div>
+	<!--body wrapper end-->
+		

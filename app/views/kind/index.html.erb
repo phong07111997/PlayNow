@@ -1,0 +1,23 @@
+
+<div class="part-cate-inside">
+    <ul class="clearfix">
+        <%
+            i = 0
+            while i<@kinds.length
+                i = i + 1
+        %>
+            <li>
+                <a href="/"" title=<%=@kinds.find(i).name%>" class="_trackLink" tracking="_frombox=">
+                    
+                    <img src="<%=@kinds.find(i).image%>" class="img-responsive" alt="Âm Nhạc Mùa Hè">
+                    
+                    <span class="des">
+                        <span class="sum-pci"><%=@kinds.find(i).description%></span>
+                    </span>
+                </a>
+            </li>
+        <%
+            end
+        %>
+    </ul>
+</div>

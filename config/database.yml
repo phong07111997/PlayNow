@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: playnow
+  database: playnow_development
   host: localhost
   port: 5432
   username: accountsql
