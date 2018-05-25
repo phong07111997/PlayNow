@@ -25,8 +25,9 @@
 							if @album.find(i).country_id == 1
 					%>
 					<div  class="top_vietnam col-md-3 browse-grid">
-						<a href="single.html"><img src="<%=@album.find(i).image%>" title="allbum-name"></a>
-							<a href="single.html"></a>
+						<%= link_to(browse_path(i)) do %>
+							<img src="<%=@album.find(i).image%>" title="allbum-name">
+						<% end %>
 						<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
 					</div>
 					<%
@@ -41,8 +42,9 @@
 							if @album.find(i).country_id == 1
 					%>
 					<div  class="all_vietnam col-md-3 browse-grid">
-						<a href="single.html"><img src="<%=@album.find(i).image%>" title="allbum-name"></a>
-							<a href="single.html"></a>
+						<%= link_to(browse_path(i)) do %>
+							<img src="<%=@album.find(i).image%>" title="allbum-name">
+						<% end %>
 						<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
 					</div>
 					<%
@@ -71,8 +73,9 @@
 							if @album.find(i).country_id == 2
 					%>
 					<div class="top_hanquoc col-md-3 browse-grid">
-						<a  href="single.html"><img src="<%=@album.find(i).image%>" title="allbum-name"></a>
-							<a href="single.html"></a>
+						<%= link_to(browse_path(i)) do %>
+							<img src="<%=@album.find(i).image%>" title="allbum-name">
+						<% end %>
 						<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
 					</div>
 					<%
@@ -87,8 +90,9 @@
 							if @album.find(i).country_id == 2
 					%>
 					<div class="all_hanquoc col-md-3 browse-grid">
-						<a  href="single.html"><img src="<%=@album.find(i).image%>" title="allbum-name"></a>
-							<a href="single.html"></a>
+						<%= link_to(browse_path(i)) do %>
+							<img src="<%=@album.find(i).image%>" title="allbum-name">
+						<% end %>
 						<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
 					</div>
 					<%
@@ -112,8 +116,9 @@
 								if @album.find(i).country_id == 3
 						%>
 						<div class="top_aumy col-md-3 browse-grid">
-							<a  href="single.html"><img src="<%=@album.find(i).image%>" title="allbum-name"></a>
-								<a href="single.html"></a>
+							<%= link_to(browse_path(i)) do %>
+								<img src="<%=@album.find(i).image%>" title="allbum-name">
+							<% end %>
 							<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
 						</div>
 						<%		
@@ -128,8 +133,9 @@
 								if @album.find(i).country_id == 3
 						%>
 						<div class="all_aumy col-md-3 browse-grid">
-							<a  href="single.html"><img src="<%=@album.find(i).image%>" title="allbum-name"></a>
-								<a href="single.html"></a>
+							<%= link_to(browse_path(i)) do %>
+								<img src="<%=@album.find(i).image%>" title="allbum-name">
+							<% end %>
 							<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
 						</div>
 						<%
@@ -146,7 +152,7 @@
 		<!-- pop-up-box --> 
 							
 		<!--//pop-up-box -->
-			<div id="albums" class="review-slider">
+			<div id="album-index" class="review-slider">
 					<div class="tittle-head">
 						<h3 class="tittle">ALBUMS <span class="new"> New</span></h3>
 						<div class="clearfix"> </div>
@@ -158,7 +164,9 @@
 									i = i + 1 
 							%>
 							<li>
-								<a href="single.html"><img src="<%=@album.find(i).image%>" alt=""/></a>
+								<%= link_to(browse_path(i)) do %>
+									<img src="<%=@album.find(i).image%>" title="allbum-name">
+								<% end %>
 								<div class="slide-title"><h4><%=@album.find(i).name%></h4></div>
 								<div class="date-city">
 									<h5><%=@album.find(i).issue%></h5>

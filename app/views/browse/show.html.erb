@@ -2,24 +2,16 @@
     <div class="detail-left col-md-7">
         <div class="title-song">
             <h1 class="name-song-detail">
-                <%=@song.name%>
+                <%=@album.name%>
             </h1>
         </div>
         <div class="info-song">
-            <span>Thể hiện: </span>
-            <h2 class="inline"><%=@artist.name%></h2>
-        </div>
-        <div class="info-song">
-            <span>Sáng tác: </span>
-            <h2 class="inline"><%=@artist.name%></h2>
-        </div>
-        <div class="info-song">
-            <span>Album: </span>
-            <h2 class="inline"><%=@song.name%> (Single)</h2>
+            <span>Phát Hành: </span>
+            <h2 class="inline"><%=@album.issue%></h2>
         </div>
         <div class="info-song">
             <span>Thể Loại: </span>
-            <h2 class="inline"><%=@kind.name%></h2>
+            <h2 class="inline"><%=@country.find(@album.country_id).name%></h2>
         </div>
         <div class="image-singer-song">
             <img class="rotate360" src="/<%=@artist.image%>" alt="<%=@artist.name%>">
@@ -35,9 +27,27 @@
             Your browser does not support the audio element.
         </audio>
         <div class="tool-song">
-            <a href="<%=@song.link%>"><button>Tải về</button></a>
-            <button>Chia sẻ</button>
-            <button class="view-song">Lượt nghe: <%=@song.view%></button>
+            <ol>
+                <%
+                    i = 0
+                    while i < @songs.length
+                        i = i + 1
+                        if @songs.find(i).album_id == @album.id
+                %>
+                <li>
+                    <div class="col-md-9">
+                        <%=@songs.find(i).name%>
+                    </div>
+                    <div class="col-md-3">
+                        <%=@artists.find(@songs.find(i).artist_id).name%>
+                    </div>
+                </li>
+                <div class="line"></div>
+                <%
+                        end
+                    end
+                %>
+            </ol>
         </div>
         <div class="lyric-song">
             <div class="title-lyric">

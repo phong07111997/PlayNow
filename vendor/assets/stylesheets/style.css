@@ -14,6 +14,11 @@ html, body{
     font-size: 100%;
   	overflow-x: hidden;
 	background: #f9f9f9;
+	color: #000;
+}
+a{
+	color: #000;
+	text-decoration: none;
 }
 @font-face {
 	font-family: Helvetica, Arial, sans-serif;
@@ -431,6 +436,12 @@ ul.nav.nav-pills.nav-stacked.custom-nav li:hover i.camera {
 	
 	.chart-image img{
 		width: 100%;
+	}
+	.chart-name a{
+		text-decoration: none;
+	}
+	.chart-name a:hover{
+		color: purple;
 	}
 	.chart-name h2{
 		position: absolute;
@@ -1762,7 +1773,7 @@ img.media-object {
     font-weight: 600;
     margin-bottom: 1em;
 }
-.inner-content.single {
+.inner-content .single {
     padding-top: 1.2em;
 }
 .coment-form  {
@@ -2057,6 +2068,10 @@ border-radius: 4px;
     width: 21.2%;
 }
 /*---browse-grid-----*/
+.browse a:hover{
+	text-decoration: none;
+	color: purple;
+}
 .browse-grid {
    width: 16.66%;
     float: left;
@@ -4838,24 +4853,27 @@ form{
 /* Chi Tiet Nhac */
 .detail-song{
 	margin: 20px 5px 0 5px;
-	min-height: 730px;
-	border: 2px solid #ccc;
+	position: relative;
 	padding-top: 10px;
 }
 .detail-left{
-	min-height: 400px;
+	
+	position: relative;
 }
 .detail-right{
-	min-height: 400px;
+	
+	position: relative;
 }
 .name-song-detail{
 	text-transform: uppercase; 
 	font-weight: 500;
 	font-size: 30px;
 	font-family: "Open Sans","segoe ui",Helvetica,Arial,sans-serif;
+	position: relative;
 }
 .inline{
 	display: inline;
+	
 }
 .inline h2{
 	font-weight: 400;
@@ -4875,7 +4893,7 @@ form{
 	background: #ccc;
 	margin: 20px 0;
 	position: relative;
-	filter: blur(30px);
+	filter: blur(10px);
 	border: 2px solid #ccc;	
 	opacity: .4;
 }
@@ -4886,17 +4904,21 @@ form{
 	min-height: 200px;
 	width: 100%; 
 	background: #ddd;
+	position: relative;
 }
 .title-lyric{
 	padding-bottom: 10px;
+	position: relative;
 }
 .content-lyrric{
 	line-height: 35px;
+	position: relative;
 }
 .tool-song button{
 	border-radius:5px;
 	background: #fff; 
 	padding: 5px;
+	position: relative;
 }
 .view-song{
 	float: right;
@@ -4975,6 +4997,7 @@ form{
 	margin: 30px 0 0 10px ;
 	position: absolute;
 	z-index: 1;
+	border: 5px #fff solid;
 }
 @-webkit-keyframes rotate360 {
 	100% { -webkit-transform: rotate(360deg); }
@@ -5002,11 +5025,11 @@ form{
 	-ms-animation-name: rotate360;
 	-o-animation-name: rotate360;
 	animation-name: rotate360;
-	-webkit-animation-duration: 50s;
-	-moz-animation-duration: 50s;
-	-ms-animation-duration: 50s;
-	-o-animation-duration: 50s;
-	animation-duration: 50s;
+	-webkit-animation-duration: 10s;
+	-moz-animation-duration: 10s;
+	-ms-animation-duration: 10s;
+	-o-animation-duration: 10s;
+	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-delay: 0.1s;
 	animation-timing-function: linear;
@@ -5020,4 +5043,179 @@ form{
 }
 .song-info-image h3{
 	font-size: 18px;
+}
+.card-image{
+	min-height: 250px;
+	background: #ccc;
+	width: 100%;
+	position: relative;
+	margin-right: 10px;
+}
+.image-artist-detail img{
+	position: absolute;
+	margin: -115px 15px;
+	border: 5px solid #fff;
+}
+.menu-artist-detail{
+	width: 100%;
+	border: 1px solid #ccc;
+	min-height: 45px;
+}
+.detail-left-detail{
+	float: left;
+	width: 24.5%;
+	min-height: 400px;
+	margin: 10px 0px 0 0;
+}
+.detail-left-detail p{
+	font-size: 14px;
+	border: 1px solid #ccc;
+	height: 45px;
+	margin-bottom: 10px;
+	border-radius:5px;
+	margin-left: -15px;
+	padding-top: 10px;
+	padding-left: 10px; 
+	text-align: justify; 
+}
+
+.detail-right-detail{
+	width: 74.8%;
+	float: left;
+	border: 1px solid #ccc;
+	margin: 10px 0 0 5px;
+	position: relative;
+	text-align: justify;
+}
+.detail-right-detail p{
+	margin: 10px;
+	position: relative;
+}
+.name-artist-detail{
+	position: absolute;
+	margin: -50px 0 0 200px;
+	font-size: 30px;
+	font-weight: 800px;
+	color: #fff;
+}
+.menu-artist-detail ul{
+	margin-left: 160px;
+	min-height: 45px;
+	list-style: none;
+	background: #f2f2f2;
+}
+.menu-artist-detail ul li{
+	border-left: 1px solid #ccc;
+	min-height: 45px;
+	border-right: 1px solid #ccc;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	padding-top: 12px;
+	margin-left: -5px;
+	font-size: 14px;
+	font-weight: bold;
+	background: #fff;
+}
+.menu-artist-detail ul li:hover{
+	background: #ccc;
+	color: #fff;
+}
+.detail-right-detail ul{
+	list-style: none;
+	margin-top: 50px;
+}
+.detail-right-detail ul li{
+	padding: 15px;
+	border-top: 1px solid #ccc;
+	margin-left: -40px; 
+	border-bottom: 1px solid #ccc;
+	color: #000;
+}
+.detail-right-detail ul li:hover{
+	background: #ddd;
+	color: #721799;
+}
+.detail-right-detail ul a{
+	text-decoration: none;
+	color: #721799;
+	font-size: 14px;
+}
+.albums-artist-detail{
+	height: 220px;
+	min-height: 220px;
+	width: 150.5px;
+	min-width: 150.5px;
+	padding: 0;
+	margin: 10px ;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+}
+
+.albums-artist-detail img{
+	border: 2px solid #ccc;
+}
+.albums-artist-detail h4{
+	font-size: 14px;
+	font-weight: 500;
+	padding: 2px 0 0 0;
+}
+.albums-artist-detail h5{
+	font-size: 12px;
+	font-weight: 400;
+	color: #ccc;
+	padding: 0px;
+}
+.left-artist{
+	width: 70%;
+	position: relative;
+	float: left;
+}
+.right-artist{
+	float: left;
+	width: 29%;
+	min-height: 845px;
+	border: #ccc 1px solid;	
+	position: relative;
+	margin: 0 5px 5px 5px;
+}
+.title-right-artist h4{
+	position: absolute;
+	top: 10px;
+	left: 115px;
+}
+.title-right-artist h3{
+	padding: 20px;
+	background: #ccc;
+}
+.title-right-artist ul{
+	list-style: none;
+}
+.title-right-artist ul li{
+	margin: 10px 0 5px -35px;
+    border-bottom: 1px solid #f2f2f2;
+    position: relative;
+	min-height: 41px;
+	padding: 10px; 
+}
+.title-right-artist img{
+	width: 100px;
+	height: 100px;
+	background: #ccc;
+	border: 1px solid #ccc;
+}
+.title-right-artist h3{
+	text-align: left;
+}
+.title-right-artist ul li:hover{
+	background: #ddd;
+	color: #fff;
+}
+.detail-left ol li{
+	padding: 10px 0;
+}
+.line{
+	border: 1px solid #ccc;
+	width: 105%;
+	margin:3px 0 3px -37px;
 }

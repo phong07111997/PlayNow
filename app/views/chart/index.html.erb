@@ -32,7 +32,9 @@
                                 </div>
                                 <div class="chart-name">
                                     <h3 class="name-song"><%=@songs.find(i).name%></h3>
-                                    <p><%=@singers.find(value).name%></p>
+                                    <%= link_to(artist_path(value)) do %>
+                                        <p><%=@singers.find(value).name%></p>
+                                    <%end%>
 									<h2><%=j+1%></h2>
                                 </div>
                             </li>
@@ -65,7 +67,9 @@
                                 </div>
                                 <div class="chart-name">
                                     <h3 class="name-song"><%=@songs.find(i).name%></h3>
-                                    <p><%=@singers.find(value).name%></p>
+                                    <%= link_to(artist_path(value)) do %>
+                                        <p><%=@singers.find(value).name%></p>
+                                    <%end%>
 									<h2><%=j+1%></h2>
                                 </div>
                             </li>
@@ -98,7 +102,9 @@
                                 </div>
                                 <div class="chart-name">
                                     <h3 class="name-song"><%=@songs.find(i).name%></h3>
-                                    <p><%=@singers.find(value).name%></p>
+                                    <%= link_to(artist_path(value)) do %>
+                                        <p><%=@singers.find(value).name%></p>
+                                    <%end%>
 									<h2><%=j+1%></h2>
                                 </div>
                             </li>

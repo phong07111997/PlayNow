@@ -24,11 +24,17 @@
 											 i = i + 1
 											 if @singer.find(i).country_id == 1
                                     %>
-                                        <div class="top-artist-vn col-md-3 browse-grid" style="height: 220px; min-height: 220px;" >
-                                            <a  href="single.html"><img src="<%=@singer.find(i).image%>" title="allbum-name"></a>
-                                                <a href="single.html"></a>
-                                            <a class="sing" style="font-size: 15px;" href="single.html"><%=@singer.find(i).name%></a>
-                                        </div>
+										
+                                        	<div class="top-artist-vn col-md-3 browse-grid" style="height: 220px; min-height: 220px;" >
+												<%= link_to(artist_path(i)) do %>
+													<img src="<%=@singer.find(i).image%>" title="allbum-name">
+												<%end%>
+												<%= link_to(artist_path(i)) do %>
+													<p><%=@singer.find(i).name%></p>
+												<%end%>
+                                       		</div>
+                                    	
+                                        
 									<%	
 												j = j + 1
 											end
@@ -41,9 +47,12 @@
 											 if @singer.find(i).country_id == 1
                                     %>
                                         <div class="all-artist-vn col-md-3 browse-grid" style="height: 220px; min-height: 220px;" >
-                                            <a  href="single.html"><img src="<%=@singer.find(i).image%>" title="allbum-name"></a>
-                                                <a href="single.html"></a>
-                                            <a class="sing" style="font-size: 15px;" href="single.html"><%=@singer.find(i).name%></a>
+                                            <%= link_to(artist_path(i)) do %>
+												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+											<%end%>
+											<%= link_to(artist_path(i)) do %>
+												<p><%=@singer.find(i).name%></p>
+											<%end%>
                                         </div>
 									<%	
 											end
@@ -76,10 +85,13 @@
 										 	i = i + 1
 										 	if @singer.find(i).country_id == 3
                                     %>
-                                        <div class="top-artist-us col-md-3 browse-grid" style="height: 220px; min-height: 220px;>
-                                            <a  href="single.html"><img src="<%=@singer.find(i).image%>" title="allbum-name"></a>
-                                                <a href="single.html"></a>
-                                            <a class="sing" style="font-size: 15px;" href="single.html"><%=@singer.find(i).name%></a>
+                                        <div class="top-artist-us col-md-3 browse-grid" style="height: 220px; min-height: 220px;">
+                                            <%= link_to(artist_path(i)) do %>
+												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+											<%end%>
+											<%= link_to(artist_path(i)) do %>
+												<p><%=@singer.find(i).name%></p>
+											<%end%>
                                         </div>
                                     <%
 												j = j + 1
@@ -92,10 +104,13 @@
 										 	i = i + 1
 										 	if @singer.find(i).country_id == 3
                                     %>
-                                        <div class="all-artist-us col-md-3 browse-grid" style="height: 220px; min-height: 220px;>
-                                            <a  href="single.html"><img src="<%=@singer.find(i).image%>" title="allbum-name"></a>
-                                                <a href="single.html"></a>
-                                            <a class="sing" style="font-size: 15px;" href="single.html"><%=@singer.find(i).name%></a>
+                                        <div class="all-artist-us col-md-3 browse-grid" style="height: 220px; min-height: 220px;">
+                                            <%= link_to(artist_path(i)) do %>
+												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+											<%end%>
+											<%= link_to(artist_path(i)) do %>
+												<p><%=@singer.find(i).name%></p>
+											<%end%>	
                                         </div>
                                     <%
 											end
@@ -128,10 +143,13 @@
 											 i = i + 1
 											 if @singer.find(i).country_id == 2
                                     %>
-                                        <div class="top-artist-hq col-md-3 browse-grid" style="height: 220px; min-height: 220px;>
-                                            <a  href="single.html"><img src="<%=@singer.find(i).image%>" title="allbum-name"></a>
-                                                <a href="single.html"></a>
-                                            <a class="sing" style="font-size: 15px;" href="single.html"><%=@singer.find(i).name%></a>
+                                        <div class="top-artist-hq col-md-3 browse-grid" style="height: 220px; min-height: 220px;">
+                                            <%= link_to(artist_path(i)) do %>
+												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+											<%end%>
+											<%= link_to(artist_path(i)) do %>
+												<p><%=@singer.find(i).name%></p>
+											<%end%>
                                         </div>
                                     <%
 												j = j + 1
@@ -144,10 +162,13 @@
 											 i = i + 1
 											 if @singer.find(i).country_id == 2
                                     %>
-                                        <div class="all-artist-hq col-md-3 browse-grid" style="height: 220px; min-height: 220px;>
-                                            <a  href="single.html"><img src="<%=@singer.find(i).image%>" title="allbum-name"></a>
-                                                <a href="single.html"></a>
-                                            <a class="sing" style="font-size: 15px;" href="single.html"><%=@singer.find(i).name%></a>
+                                        <div class="all-artist-hq col-md-3 browse-grid" style="height: 220px; min-height: 220px;">
+                                            <%= link_to(artist_path(i)) do %>
+												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+											<%end%>
+											<%= link_to(artist_path(i)) do %>
+												<p><%=@singer.find(i).name%></p>
+											<%end%>
                                         </div>
                                     <%
 											end
@@ -164,7 +185,7 @@
 							<div class="clearfix"></div>
 						<!--body wrapper end-->
 						<!-- /w3layouts-agile -->
-						<div id="albums" class="review-slider">
+						<div id="album-artist" class="review-slider">
 					<div class="tittle-head">
 						<h3 class="tittle">NGHỆ SĨ <span class="new"> Hot</span></h3>
 						<div class="clearfix"> </div>

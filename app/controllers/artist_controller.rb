@@ -3,8 +3,10 @@ class ArtistController < ApplicationController
         @singer = Artist.all
     end
     def show
-        @singer = Artist.all
-        @album = Album.all
+        @singer = Artist.find(params[:id])
+        @albums = Album.all
         @songs = Song.all
+        @country = Country.all
+        @singers = Artist.all
     end
 end

@@ -9,7 +9,8 @@ class ChartController < ApplicationController
         @artist = Artist.find(@artist_find)
         @kind_find = @song.kind_id
         @kind = Kind.find(@kind_find)
-        @comments = Comment.all;
-        @user = User.all;
+        @comments = Comment.all
+        @user = User.all
+        
     end
 end

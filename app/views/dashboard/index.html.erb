@@ -71,18 +71,18 @@
 							while i<8
 								i = i + 1
 							%>
+							<%= link_to(browse_path(i)) do %>
 								<div class="col-md-3 content-grid" style="height: 220px; min-height: 220px;">
-									<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="<%=@album.find(i).image%>" title="<%=@album.find(i).name%>"></a>
+									<img src="<%=@album.find(i).image%>" title="<%=@album.find(i).name%>">
 
-									<a class="button play-icon popup-with-zoom-anim" href="#small-dialog"><%=@album.find(i).name%></a>
+									<p class="button play-icon popup-with-zoom-anim" href="#small-dialog"><%=@album.find(i).name%></p>
 								</div>
+							<% end %>
+								
 							<%
 								end
 							%>	
-							<div id="small-dialog" class="mfp-hide">
-								<iframe src="https://player.vimeo.com/video/271209430"></iframe>
 							
-							</div>
 							
 							<div class="clearfix"> </div>
 						</div>
@@ -128,7 +128,7 @@
 		<div class="clearfix"></div>	
 					<div class="review-slider">
 						<div class="tittle-head">
-							<h3 class="tittle">NHẠC SĨ <span class="new"> Hot Nhất</span></h3>
+							<h3 class="tittle">NGHỆ SĨ <span class="new"> Hot Nhất</span></h3>
 							<div class="clearfix"> </div>
 						</div>
 						<ul id="flexiselDemo1">
@@ -140,12 +140,12 @@
 								%>
 
 									<li>
-										<a href="/single"><img src="<%=@musician.find(i).image%>" alt="<%=@musician.find(i).name%>"/></a>
+										<img src="<%=@musician.find(i).image%>" alt="<%=@musician.find(i).name%>"/>
 										<div class="slide-title"><h4><%=@musician.find(i).name%> </div>
 										<div class="date-city">
 											<h5><%=@musician.find(i).birthday%></h5>
 											<div class="buy-tickets">
-												<a href="/single">READ MORE</a>
+												<%= link_to 'READ MORE'.html_safe, artist_path(i) %>
 											</div>
 										</div>
 									</li>
