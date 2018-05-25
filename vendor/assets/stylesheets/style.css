@@ -446,6 +446,7 @@ ul.nav.nav-pills.nav-stacked.custom-nav li:hover i.camera {
 		max-height: 37px;
 		overflow-y: hidden; 
 		margin-bottom: 10px;
+		text-align: left;
 	}
 	
 	.chart-image{
@@ -2209,6 +2210,7 @@ h2.second-tittle {
 }
 .grid_5 h1, h2, h3, h4, h5, h6 {
   padding: 10px 0;
+  text-align: center;
 }
 .grid_5 {
   margin: 31px 0;
@@ -4601,6 +4603,89 @@ text-decoration:none;
 	
 }
 /***responsive***/
+.form-group input{
+	float: right;
+}
+.control-label {
+    padding-top: 7px;
+	margin-bottom: 0;
+}
+.container{
+	margin-top: 50px;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+    border-right:0; 
+    box-shadow:0 0 0; 
+    border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+.bg{
+    background: url(fundog.jpg);
+    background-size: cover;
+    color: white;
+    height: 500px;
+    margin-bottom: 0px;
+    margin-top:0px;
+}
+.navbar{
+    margin-bottom: 0px;
+    margin-top:0px;
+
+
+}
+.help{
+    text-align: right;
+    margin-bottom: 0px;
+    height: 300px;
+
+}
+
+.spread{margin-bottom: 0px;}
+.usp{
+    text-align: center;
+}
+
+
+
+.row {
+	display: table;
+	margin: 0 auto;
+	width: 80%;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+.profile{
+    margin-bottom: 100px;
+    margin-top:30px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+
 .music-right ul{
 	margin: 80px 0 0 0;
 }
@@ -4676,4 +4761,263 @@ text-decoration:none;
 	font-size: 25px; 
 	height: 30px;
 	width: 30px;
+}
+/* Form Create Kind */
+.dialog-add{
+	position: relative;
+	border: 1px solid #ddd;
+	border-radius: 5px; 
+	width: 800px;
+	margin: 50px auto;
+	padding: 10px;
+	min-height: 410px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+.add-image{
+	position: relative;
+	width: 28%;
+	float: left;
+	margin-right: 2%;
+}
+
+.add-info{
+	position: relative;
+	width: 70%;
+	float: left;
+}
+textarea {
+	position: relative;
+	width: 100%;
+	height: 295px;
+	padding: 10px 5px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	font-size: 16px;
+	resize: none;
+}
+.image-form img{
+	position: relative;
+	width: 238px;
+	height: 238px;
+	margin: 0 -10px;
+}
+.form-text{
+	margin-bottom: 5px;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	padding: 10px 5px;
+	position: relative;
+}
+input[type=text]{
+	width: 100%;
+	height: 40px;
+	padding: 0 5px;
+	font-size: 15px; 
+	position: relative;
+}
+
+input[type=button]{
+	background: #ffffff;
+	border-radius: 5px;
+	padding: 5px;
+	float: right;
+	position: relative;
+}
+input[type=file]{
+	margin: -15px 60px;
+	color:transparent;
+	width: 120px;
+	position: absolute;
+}
+form{
+	text-transform: uppercase;
+	position: relative;
+}
+/* Chi Tiet Nhac */
+.detail-song{
+	margin: 20px 5px 0 5px;
+	min-height: 730px;
+	border: 2px solid #ccc;
+	padding-top: 10px;
+}
+.detail-left{
+	min-height: 400px;
+}
+.detail-right{
+	min-height: 400px;
+}
+.name-song-detail{
+	text-transform: uppercase; 
+	font-weight: 500;
+	font-size: 30px;
+	font-family: "Open Sans","segoe ui",Helvetica,Arial,sans-serif;
+}
+.inline{
+	display: inline;
+}
+.inline h2{
+	font-weight: 400;
+	font-size: 20px;
+}
+.info-song span{
+	color: #888;
+	font-size: 14px;
+}
+.info-song h2{
+	color: #000000;
+	font-size: 14px;
+}
+.play-song{
+	width: 100%;
+	min-height: 305px;
+	background: #ccc;
+	margin: 20px 0;
+	position: relative;
+	filter: blur(30px);
+	border: 2px solid #ccc;	
+	opacity: .4;
+}
+.lyric-song{
+	margin-top: 10px;
+	border-top: 2px solid #ccc;
+	padding: 5px;
+	min-height: 200px;
+	width: 100%; 
+	background: #ddd;
+}
+.title-lyric{
+	padding-bottom: 10px;
+}
+.content-lyrric{
+	line-height: 35px;
+}
+.tool-song button{
+	border-radius:5px;
+	background: #fff; 
+	padding: 5px;
+}
+.view-song{
+	float: right;
+}
+.comment_song{
+	margin-top: 10px;
+	padding-top: 5px;
+}
+.comment_song ul{
+	list-style: none;
+	margin-top: 60px;
+	margin-left: 0;
+	padding: 0;
+}
+.content-comment,.content-comment h3, .time-comment{
+	font-size: 14px;
+}
+.content-comment{
+	color: #000;
+}
+.time-comment, .content-comment p{
+	color: #666;
+	font-size: 12px;
+}
+.audio-song{
+	position: absolute;
+	z-index: 1;
+	margin: -50px 0 0 10px ;
+	width: 90%;
+	background-color: transparent;
+}
+.form-comment textarea{
+	position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+}
+.image-user{
+	width: 10%;
+	float:left;
+	margin-right: 10px;
+}
+.content-comment{
+	width: 69%;
+	float:left;
+	padding: 0
+}
+.time-comment{
+	width: 17%;
+	float:left;
+	margin-left: 10px;
+}
+.comment_song ul li{
+	width: 100%;
+	min-height: 100px;
+	padding: 5px;
+	border-radius: 5px;
+	border: solid 1px #ccc; 
+	margin-bottom: 5px;
+}
+.content-comment h3{
+	text-align: left;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+
+.image-singer-song img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%; 
+	margin: 30px 0 0 10px ;
+	position: absolute;
+	z-index: 1;
+}
+@-webkit-keyframes rotate360 {
+	100% { -webkit-transform: rotate(360deg); }
+}
+ 
+@-moz-keyframes rotate360 {
+	100% { -moz-transform: rotate(360deg); }
+}
+ 
+@-ms-keyframes rotate360 {
+	100% { -ms-transform: rotate(360deg); }
+}
+ 
+@-o-keyframes rotate360 {
+	100% { -o-transform: rotate(360deg); }
+}
+ 
+@keyframes rotate360 {
+	100% { transform: rotate(360deg); }
+}
+ 
+.rotate360 {
+	-webkit-animation-name: rotate360;
+	-moz-animation-name: rotate360;
+	-ms-animation-name: rotate360;
+	-o-animation-name: rotate360;
+	animation-name: rotate360;
+	-webkit-animation-duration: 50s;
+	-moz-animation-duration: 50s;
+	-ms-animation-duration: 50s;
+	-o-animation-duration: 50s;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
+	animation-delay: 0.1s;
+	animation-timing-function: linear;
+	animation-play-state: running;
+}
+.song-info-image{
+	z-index: 2;
+	position: absolute; 
+	margin: 100px 0 0 300px;
+	color: #fff;
+}
+.song-info-image h3{
+	font-size: 18px;
 }

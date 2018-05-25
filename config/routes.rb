@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   resources :blog
   resources :chart
   resources :artist
-  resources :kind
+  resources :kind 
 
 end

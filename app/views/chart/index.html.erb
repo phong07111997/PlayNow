@@ -28,7 +28,7 @@
                             <li> 
                                 <div class="chart-image">
                                     <img  src="<%=@singers.find(value).image%>">
-                                    <a href="#"></a>
+                                    <%= link_to '<i class="glyphicon glyphicon-play-circle"></i>'.html_safe, chart_path(i) %>                          
                                 </div>
                                 <div class="chart-name">
                                     <h3 class="name-song"><%=@songs.find(i).name%></h3>
@@ -60,8 +60,8 @@
                             %>
                             <li> 
                                 <div class="chart-image">
-                                    
                                     <img  src="<%=@singers.find(value).image%>">
+                                    <%= link_to '<i class="glyphicon glyphicon-play-circle"></i>'.html_safe, chart_path(i) %>
                                 </div>
                                 <div class="chart-name">
                                     <h3 class="name-song"><%=@songs.find(i).name%></h3>
@@ -94,6 +94,7 @@
                             <li> 
                                 <div class="chart-image">
                                     <img  src="<%=@singers.find(value).image%>">
+                                    <%= link_to '<i class="glyphicon glyphicon-play-circle"></i>'.html_safe, chart_path(i) %>
                                 </div>
                                 <div class="chart-name">
                                     <h3 class="name-song"><%=@songs.find(i).name%></h3>

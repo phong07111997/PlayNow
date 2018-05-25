@@ -1,0 +1,124 @@
+<div id="page-wrapper">
+<div class="inner-content">
+    <div class="music-browse">
+                <!--//////////////////////////////ẢNH ĐẠI DIỆN + NAME/////////////////////////////////-->
+        <div id="vn-artist" class="browse">
+                            <div class="tittle-head two">
+                                <div class="top-artist-vn col-md-3 browse-grid" style="height: 220px; min-height: 250px;" >
+                                        <a><img src="/<%=@singer.find(1).image%>" title="allbum-name"></a>
+                                            <div class="info-summary">
+                                               <h1 class="sing" style="font-size: 25px"><%=@singer.find(1).name%></h1>                                                                                                                 
+                                            </div>
+                                                                             
+                                </div>
+										<p style="font-size: 20px;"><%=@singer.find(1).story%></p>	
+											
+                            </div>
+        </div>
+     <!--//////////////////////////////CÁC BÀI HÁT/////////////////////////////////-->
+         <div class="tittle-head two">
+						<h3 class="tittle">Bài Hát <%=@singer.find(1).name%></h3>
+						<div class="clearfix"> </div>
+					</div>
+					<%
+						i = 0
+						j = 0
+						while i<@album.length && j < 6
+							i = i + 1
+							if @album.find(i).country_id == 1
+					%>
+					<li>
+						<!--<a href="single.html"><img src="<%=@album.find(i).image%>" title="allbum-name"></a> -->
+						<a style="font-size: 20px;" href="single.html"><%=@album.find(i).name%></a>
+						
+					</li>
+					<%
+								j = j + 1
+							end
+						end
+					%>
+        </div>
+
+        <!--//////////////////////////////THÔNG TIN ALBUMS/////////////////////////////////-->
+        <div class="tittle-head two">
+						<h3 class="tittle">Albums <%=@singer.find(1).name%></h3>
+						<div class="clearfix"> </div>
+					</div>
+					<%
+						i = 0
+						j = 0
+						while i<@album.length && j < 6
+							i = i + 1
+							if @album.find(i).country_id == 1
+					%>
+					<div  class="top_vietnam col-md-3 browse-grid">
+						<a href="single.html" ><img src="/<%=@album.find(i).image%>" style="height: 250px; min-height: 250px" title="allbum-name"></a>
+							<a href="single.html"></a>
+						<a class="sing" style="font-size: 17px;" href="single.html"><%=@album.find(i).name%></a>
+					</div>
+					<%
+								j = j + 1
+							end
+						end
+					%>
+							<div class="clearfix"> </div> 
+        </div>  
+		<div class="clearfix"> </div> 
+        <!--/////////////////////////////G?I Ý NGHỆ SI KHÁC/////////////////////////////////////-->
+        <div id="vn-artist" class="browse">
+								<div class="tittle-head two">
+									<h3 class="tittle">NGHỆ SĨ TƯƠNG TƯ <span class="new">Hot</span></h3>
+									<h4 class="tittle third"><button id="artistall_vietnam">+</button></h4>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+								<div id="myTabContent" class="tab-content">
+								  <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+									<div class="browse-inner">
+								 	 <!-- /agileits -->
+                                    <%
+										i = 0
+										j = 0
+                                        while i< @singer.length && j < 6
+											 i = i + 1
+											 if @singer.find(i).country_id == 1
+                                    %>
+                                        <div class="top-artist-vn col-md-3 browse-grid" style="height: 220px; min-height: 220px;" >
+                                            <a  href="single.html"><img src="/<%=@singer.find(i).image%>" title="allbum-name"></a>
+                                                <a href="single.html"></a>
+                                            <a class="sing" style="font-size: 17px;" href="single.html"><%=@singer.find(i).name%></a>
+                                        </div>
+									<%	
+												j = j + 1
+											end
+                                         end
+                                    %>		
+									<%
+										i = 0
+                                        while i< @singer.length
+											 i = i + 1
+											 if @singer.find(i).country_id == 1
+                                    %>
+                                        <div class="all-artist-vn col-md-3 browse-grid" style="height: 220px; min-height: 220px;" >
+                                            <a  href="single.html"><img src="/<%=@singer.find(i).image%>" title="allbum-name"></a>
+                                                <a href="single.html"></a>
+                                            <a class="sing" style="font-size: 15px;" href="single.html"><%=@singer.find(i).name%></a>
+                                        </div>
+									<%	
+											end
+                                         end
+                                    %>			
+										</div>
+								  </div>
+								</div>
+                                <div class="clearfix"> </div>
+							</div>
+						 	 <!-- /agileinfo -->
+						</div>          
+
+
+
+
+    </div>
+</div>
+</div> 

@@ -1,0 +1,90 @@
+<div class="detail-song">
+    <div class="detail-left col-md-7">
+        <div class="title-song">
+            <h1 class="name-song-detail">
+                <%=@song.name%>
+            </h1>
+        </div>
+        <div class="info-song">
+            <span>Thể hiện: </span>
+            <h2 class="inline"><%=@artist.name%></h2>
+        </div>
+        <div class="info-song">
+            <span>Sáng tác: </span>
+            <h2 class="inline"><%=@artist.name%></h2>
+        </div>
+        <div class="info-song">
+            <span>Album: </span>
+            <h2 class="inline"><%=@song.name%> (Single)</h2>
+        </div>
+        <div class="info-song">
+            <span>Thể Loại: </span>
+            <h2 class="inline"><%=@kind.name%></h2>
+        </div>
+        <div class="image-singer-song">
+            <img class="rotate360" src="/<%=@artist.image%>" alt="<%=@artist.name%>">
+            <div class="song-info-image">
+                <h3>Bài Hát: <%=@song.name%></h3>
+                <h3>Ca Sĩ: <%=@artist.name%></h3>
+            </div>
+        </div>
+        <div class="play-song" style="background-image: url('/<%=@artist.image%>');"></div>
+        <audio controls autoplay class="audio-song">
+            <source src="<%=@song.link%>" type="audio/ogg">
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="tool-song">
+            <button>Tải về</button>
+            <button>Chia sẻ</button>
+            <button class="view-song">Lượt nghe: <%=@song.view%></button>
+        </div>
+        <div class="lyric-song">
+            <div class="title-lyric">
+                Lời bài hát <b><%@song.name%></b>
+            </div>
+            <div class="content-lyrric">
+                <%=@song.lyric%>
+            </div>
+        </div>
+    </div>
+    <div class="detail-right col-md-5">
+        <div class="title-song">
+            <h1 class="name-song">
+                BÌNH LUẬN (0)
+            </h1>
+        </div>
+        <div class="comment_song">
+            <div class="form-comment">
+                <form class="form-input-comment">
+                    <textarea name="content" cols="30" rows="10"></textarea>
+                    <input type="button" value="Bình Luận">
+                </form>
+            </div>
+            <ul>
+                <%
+                    i = 0
+                    while i<@comments.length
+                        i = i +1;
+                        if @comments.find(i).song_id == @song.id
+                %>
+                <li>
+                    <div class="image-user">
+                        <img width="50" height="50" class="zmp3-thumbnail fn-com-user-avatar" src="https://s120.avatar.talk.zdn.vn/b/a/4/6/10/120/0067af61038833ab72461a7f7b40124e.jpg" alt="">
+                    </div>
+                    <div class="content-comment">
+                        <h3><%=@user.find(@comments.find(i).user_id).display_name%></h3>
+                        <p><%=@comments.find(i).content%></p>
+                    </div>
+                    <div class="time-comment">
+                        <p><%=@comments.find(i).time%></p>
+                    </div>
+                </li>
+                <%
+                        end
+                    end
+                %>
+            </ul>
+        </div>
+    </div>
+</div>

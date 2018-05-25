@@ -20,7 +20,6 @@
 
 #= require easyResponsiveTabs
 #= require jsalbums
-
 new UISearch( document.getElementById( 'sb-search' ) )
 
 $(document).ready( () ->
