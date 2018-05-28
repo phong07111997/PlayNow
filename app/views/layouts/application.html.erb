@@ -12,6 +12,15 @@
   </head>
 
   <body class="sticky-header left-side-collapsed" >
+    <section class="content" style="min-height: auto;">
+      <% flash.each do |key, value| %>
+        <div class="row">
+          <div class="alert alert-<%= key %>">
+            <%= value %>
+          </div>
+        </div>
+      <% end %>
+    </section>
   
     <section>
       <%= render "layouts/navigation"%>

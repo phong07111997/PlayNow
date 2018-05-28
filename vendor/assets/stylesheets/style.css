@@ -2083,9 +2083,14 @@ border-radius: 4px;
 	padding-left: 0;
 	height: 240px;
 	min-height: 240px;
+	
 }
-.browse-grid img:hover{
-	border: 1px solid #00a0dc;
+i.glyphicon.glyphicon-play-circle {
+    position: absolute;
+    top:30%;
+    left: 40%;
+    color: #fff;
+	font-size: 3em;
 }
 .browse-grid img {
     width: 100%;
@@ -2097,16 +2102,16 @@ border-radius: 4px;
 .browse-grid:nth-child(6),.browse-grid:nth-child(12) {
     margin-left: 0%;
 }
+
 .browse {
     padding: 1em 0 0 0;
 }
-i.glyphicon.glyphicon-play-circle {
-    position: absolute;
-    top:30%;
-    left: 40%;
-    color: #fff;
-    font-size: 3em;
+.run-artist img:hover{
+	opacity: 0.6;
 }
+
+
+
 a.sing {
     color: #444;
     font-size: 1.4em;
@@ -2126,12 +2131,36 @@ h4.tittle.third {
     float: right;
     margin-right:1%;
 }
-.browse-grid img:hover {
-    opacity: 0.8;
+
+
+.glyphicon-play-circle{
+	opacity: 0;
+	height: 50px;
+	width: 50px;
+	background:url("/images/icon.png") no-repeat;
+	background-position: 0 -160px;
 }
+.browse-grid:hover .glyphicon-play-circle{
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.content-grid:hover .glyphicon-play-circle{
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.chart-image:hover .glyphicon-play-circle{
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+.albums-artist-detail:hover .glyphicon-play-circle{
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+
 /*-- wthree --*/
 /*-- agileits --*/
 /*---browse-grid-----*/
+
 /*---browse-grid-----*/
 .artist-grid {
    width: 16.66%;
@@ -2158,8 +2187,8 @@ h4.tittle.third {
 }
 i.glyphicon.glyphicon-play-circle {
     position: absolute;
-    top:30%;
-    left: 40%;
+    top:35%;
+    left: 35%;
     color: #fff;
     font-size: 3em;
 }
@@ -4920,6 +4949,10 @@ form{
 	padding: 5px;
 	position: relative;
 }
+.tool-song{
+	max-height: 300px;
+	overflow-y: auto;
+}
 .view-song{
 	float: right;
 }
@@ -5086,6 +5119,8 @@ form{
 	margin: 10px 0 0 5px;
 	position: relative;
 	text-align: justify;
+	max-height: 540px;
+	overflow-y: auto;
 }
 .detail-right-detail p{
 	margin: 10px;
@@ -5218,4 +5253,112 @@ form{
 	border: 1px solid #ccc;
 	width: 105%;
 	margin:3px 0 3px -37px;
+}
+/* Show Kind */
+.detail-kind{
+	width: 100%;
+	position: relative;
+	min-height: 500px;
+	margin-top: 15px;
+}	
+.left-detail-kind{
+	width: 70%;
+	position: relative;
+	float: left;
+	border-left: 2px solid #ccc ; 
+	border-radius: 5px; 
+}
+.left-detail-kind img{
+	width: 100%;
+	height: auto;
+	border: 2px solid #fff;
+}
+.header-detail-kind p{
+	position: absolute;
+	color: #fff;
+	z-index: 1;
+	margin: -55px 0 0 80px;
+}
+.content-left-kind{
+	width: 100%;
+	position: relative;
+}
+.content-left-kind h2{
+	text-align: left;
+	color: purple;
+	font-size: 26px;
+	font-weight: 300;
+	margin-left: 10px;
+	border-bottom: 2px solid #ccc;
+}
+.playlist-left-detail-kind ul{
+	margin: 0 -40px;
+	list-style: none;
+	position: relative;
+}
+
+.playlist-left-detail-kind ul li{
+	max-width: 220px;
+	min-height:  166px;
+	border: 1px solid #ccc;
+	margin:5px;
+	float: left;
+}
+.info-playlist-left-kind h3{
+	font-size: 16px;
+	max-height: 37px;
+	overflow-y: hidden; 
+	line-height: 25px;
+}
+.info-playlist-left-kind p{
+	position: relative;
+	font-size: 12px;
+	color: #ccc;
+	text-align: center;
+	margin: -15px 0 5px 0;
+}
+.right-detail-kind{
+	width: 30%;
+	position: relative;
+	float: left;
+}
+.right-detail-kind h2{
+	text-align: left;
+	color: purple;
+	font-size: 26px;
+	font-weight: 300;
+	margin-left: 10px;
+	border-bottom: 2px solid #ccc;
+}
+.playlist-right-detail-kind ul{
+	list-style-type: none;
+	margin: 0 20px 0 -30px;
+}
+.playlist-right-detail-kind ul li img{
+	width: 100%;
+	max-height: 100px;
+}
+.playlist-right-detail-kind ul li{
+	margin-bottom: 15px;
+}
+.image-playlist-left-kind{
+	position: relative;
+}
+.info-playlist-left-kind a{
+	text-decoration: none;
+}
+.info-playlist-left-kind a:hover{
+	color: purple;
+}
+.image-playlist-left-kind:hover .glyphicon-play-circle{
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+
+/* Login */
+.title {
+  font-size: 70px;
+  text-align: center;
+  font-weight: bold;
+  color: #BDBDBD;
 }

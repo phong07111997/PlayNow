@@ -27,11 +27,15 @@
                             %>
                             <li> 
                                 <div class="chart-image">
-                                    <img  src="<%=@singers.find(value).image%>">
-                                    <%= link_to '<i class="glyphicon glyphicon-play-circle"></i>'.html_safe, chart_path(i) %>                          
-                                </div>
+                                    <%= link_to(chart_path(i)) do %>
+                                        <img class="image" src="<%=@singers.find(value).image%>" title="<%=@songs.find(i).name%>">
+                                        <i class="glyphicon glyphicon-play-circle"></i>	
+                                    <% end %>
+                                    </div>
                                 <div class="chart-name">
-                                    <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <%= link_to(chart_path(i)) do %>
+                                        <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <% end %>
                                     <%= link_to(artist_path(value)) do %>
                                         <p><%=@singers.find(value).name%></p>
                                     <%end%>
@@ -62,11 +66,15 @@
                             %>
                             <li> 
                                 <div class="chart-image">
-                                    <img  src="<%=@singers.find(value).image%>">
-                                    <%= link_to '<i class="glyphicon glyphicon-play-circle"></i>'.html_safe, chart_path(i) %>
-                                </div>
+                                    <%= link_to(chart_path(i)) do %>
+                                        <img class="image" src="<%=@singers.find(value).image%>" title="<%=@songs.find(i).name%>">
+                                        <i class="glyphicon glyphicon-play-circle"></i>	
+                                    <% end %>
+                                    </div>
                                 <div class="chart-name">
-                                    <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <%= link_to(chart_path(i)) do %>
+                                        <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <% end %>
                                     <%= link_to(artist_path(value)) do %>
                                         <p><%=@singers.find(value).name%></p>
                                     <%end%>
@@ -97,11 +105,15 @@
                             %>
                             <li> 
                                 <div class="chart-image">
-                                    <img  src="<%=@singers.find(value).image%>">
-                                    <%= link_to '<i class="glyphicon glyphicon-play-circle"></i>'.html_safe, chart_path(i) %>
-                                </div>
+                                    <%= link_to(chart_path(i)) do %>
+                                        <img class="image" src="<%=@singers.find(value).image%>" title="<%=@songs.find(i).name%>">
+                                        <i class="glyphicon glyphicon-play-circle"></i>	
+                                    <% end %>
+                                    </div>
                                 <div class="chart-name">
-                                    <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <%= link_to(chart_path(i)) do %>
+                                        <h3 class="name-song"><%=@songs.find(i).name%></h3>
+                                    <% end %>
                                     <%= link_to(artist_path(value)) do %>
                                         <p><%=@singers.find(value).name%></p>
                                     <%end%>

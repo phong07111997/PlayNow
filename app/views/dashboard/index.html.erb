@@ -12,39 +12,26 @@
 						<div class="banner">
 								<div class="callbacks_container">
 								<ul class="rslides callbacks callbacks1" id="slider4">
+									<%
+											i = 0
+											@singer.each do |singer|
+												if i < 3
+									%>
 									<li>
 										<div class="banner-img">
-											<img src="images/11.jpg" class="img-responsive" alt="">
+											<img src="<%=singer.image_big%>" class="img-responsive" alt="">
 										</div>
 										<div class="banner-info">
-											<a class="trend" href="/single">TRENDING</a>
-											<h3>Let Your Home</h3>
-											<p>Album by <span>Rock star</span></p>
-										</div>
+											<a class="trend">TRENDING</a>
+											<h3><%=singer.name%></h3>
 
-									</li>
-									<li>
-										<div class="banner-img">
-											<img src="images/22.jpg" class="img-responsive" alt="">
-										</div>
-										<div class="banner-info">
-											<a class="trend" href="/single">TRENDING</a>
-											<h3>Charis Brown feet</h3>
-											<p>Album by <span>Rock star</span></p>
 										</div>
 									</li>
-									<li>
-										<div class="banner-img">
-											<img src="images/33.jpg" class="img-responsive" alt="">
-										</div>
-										<div class="banner-info"> 
-											<a class="trend" href="/single">TRENDING</a>
-											<h3>Let Your Home</h3>
-											<p>Album by <span>Rock star</span></p>
-										</div>
-
-											<!-- /w3layouts-agileits -->
-									</li>
+									<%
+												i = i + 1
+											end
+										end
+									%>
 								</ul>
 							</div>
 					
@@ -67,15 +54,13 @@
 							</div>
 
 							<%
-							i = 0
-							while i<8
-								i = i + 1
+								@album.each do |al|
 							%>
-							<%= link_to(browse_path(i)) do %>
+							<%= link_to(browse_path(al.id)) do %>
 								<div class="col-md-3 content-grid" style="height: 220px; min-height: 220px;">
-									<img src="<%=@album.find(i).image%>" title="<%=@album.find(i).name%>">
-
-									<p class="button play-icon popup-with-zoom-anim" href="#small-dialog"><%=@album.find(i).name%></p>
+									<img src="<%=al.image%>" title="<%=al.name%>">
+									<i class="glyphicon glyphicon-play-circle"></i>
+									<p class="button play-icon popup-with-zoom-anim" href="#small-dialog"><%=al.name%></p>
 								</div>
 							<% end %>
 								
@@ -96,18 +81,25 @@
 							<div class="part-cate-kind">
 								<ul class="clearfix">
 									<%
-										i = 0
-										while i < 7
-											i = i + 1
+										if @kind.length < 7
+											j = @kind.length
+										else
+											j = 7
+										end
+										i = 1
+										@kind.each do |kind|
+											if i < j
 									%>
 										<li>
-											<a href="/kind" title="<%=@kind.find(i).name%>" class="_trackLink" tracking="_frombox=#home_chude_01">
+											<a href="/kind/<%=i%>" title="<%=kind.name%>" class="_trackLink" tracking="_frombox=#home_chude_01">
 												
-												<img src="<%=@kind.find(i).image%>" class="img-responsive" alt="Zing Collection">
+												<img src="<%=kind.image%>" class="img-responsive" alt="<%=kind.name%>">
 												
 											</a>
 										</li>
 									<%
+												i = i + 1
+											end
 										end
 									%>
 								</ul>

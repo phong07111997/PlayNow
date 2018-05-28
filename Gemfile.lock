@@ -132,6 +132,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.4-x86-mingw32)
     multi_json (1.13.1)
+    mysql2 (0.4.10-x86-mingw32)
     nio4r (2.3.1)
     nokogiri (1.8.2-x86-mingw32)
       mini_portile2 (~> 2.3.0)
@@ -241,11 +242,13 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
+  mysql2 (~> 0.4.4)
   pg
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   selenium-webdriver
+  sprockets-rails
   sqlite3
   turbolinks (~> 5)
   tzinfo-data

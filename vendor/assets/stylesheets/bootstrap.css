@@ -385,9 +385,9 @@ th {
 .glyphicon-inbox:before {
   content: "\e028";
 }
-.glyphicon-play-circle:before {
-  content: "\e029";
-}
+/* .glyphicon-play-circle:before {
+  
+} */
 .glyphicon-repeat:before {
   content: "\e030";
 }
@@ -1960,6 +1960,7 @@ pre code {
   }
   .col-md-3 {
     width: 25%;
+  
   }
   .col-md-2 {
     width: 16.66666667%;

@@ -1,6 +1,6 @@
 <div id="page-wrapper">
 <div class="left-artist">
-    <div class="card-image" style="background:url('https://zmp3-photo.zadn.vn/cover_artist/e/6/e6861e57afa5b5704c91f06a10185541_1501059020.jpg'); background-size: 100%;"></div>
+    <div class="card-image" style="background:url('/<%=@singer.image_big%>'); background-size: 100%;"></div>
     <div class="image-artist-detail">
         <img width="150" height="150" src="/<%=@singer.image%>" title="allbum-name">
     </div>
@@ -44,18 +44,21 @@
         <h2>ALBUM</h2>
         <%
             i = 0;
+            current = 0;
             while i < @songs.length
                 i = i + 1
-                if @songs.find(i).artist_id == @singer.id
+                if @songs.find(i).artist_id == @singer.id && current < @songs.find(i).album_id
         %>
         <%= link_to(browse_path(i)) do %>
             <div class="albums-artist-detail col-md-3">
                 <image width='150' height='150' src="/<%=@albums.find(@songs.find(i).album_id).image%>"/>
+                <i class="glyphicon glyphicon-play-circle"></i>	
                 <h4><%=@albums.find(@songs.find(i).album_id).name%></h4>
                 <h5><%=@singer.name%><h5>
             </div>
         <%end%>
         <%
+                    current = current + 1
                 end
             end
         %>

@@ -26,9 +26,10 @@
 					%>
 					<div  class="top_vietnam col-md-3 browse-grid">
 						<%= link_to(browse_path(i)) do %>
-							<img src="<%=@album.find(i).image%>" title="allbum-name">
+							<img class="image" src="<%=@album.find(i).image%>" title="allbum-name">
+							<i class="glyphicon glyphicon-play-circle"></i>
 						<% end %>
-						<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
+						<a class="sing" style="font-size: 15px;"><%=@album.find(i).name%></a>
 					</div>
 					<%
 								j = j + 1
@@ -43,9 +44,10 @@
 					%>
 					<div  class="all_vietnam col-md-3 browse-grid">
 						<%= link_to(browse_path(i)) do %>
-							<img src="<%=@album.find(i).image%>" title="allbum-name">
+							<img class="image" src="<%=@album.find(i).image%>" title="allbum-name">
+							<i class="glyphicon glyphicon-play-circle"></i>
 						<% end %>
-						<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
+						<a class="sing" style="font-size: 15px;"><%=@album.find(i).name%></a>
 					</div>
 					<%
 							end
@@ -74,9 +76,10 @@
 					%>
 					<div class="top_hanquoc col-md-3 browse-grid">
 						<%= link_to(browse_path(i)) do %>
-							<img src="<%=@album.find(i).image%>" title="allbum-name">
+							<img class="image" src="<%=@album.find(i).image%>" title="allbum-name">
+							<i class="glyphicon glyphicon-play-circle"></i>
 						<% end %>
-						<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
+						<a class="sing" style="font-size: 15px;"><%=@album.find(i).name%></a>
 					</div>
 					<%
 								j = j + 1
@@ -91,9 +94,10 @@
 					%>
 					<div class="all_hanquoc col-md-3 browse-grid">
 						<%= link_to(browse_path(i)) do %>
-							<img src="<%=@album.find(i).image%>" title="allbum-name">
+							<img class="image" src="<%=@album.find(i).image%>" title="allbum-name">
+							<i class="glyphicon glyphicon-play-circle"></i>
 						<% end %>
-						<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
+						<a class="sing" style="font-size: 15px;"><%=@album.find(i).name%></a>
 					</div>
 					<%
 							end
@@ -117,9 +121,10 @@
 						%>
 						<div class="top_aumy col-md-3 browse-grid">
 							<%= link_to(browse_path(i)) do %>
-								<img src="<%=@album.find(i).image%>" title="allbum-name">
+								<img class="image" src="<%=@album.find(i).image%>" title="allbum-name">
+								<i class="glyphicon glyphicon-play-circle"></i>
 							<% end %>
-							<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
+							<a class="sing" style="font-size: 15px;"><%=@album.find(i).name%></a>
 						</div>
 						<%		
 									j = j + 1
@@ -134,9 +139,10 @@
 						%>
 						<div class="all_aumy col-md-3 browse-grid">
 							<%= link_to(browse_path(i)) do %>
-								<img src="<%=@album.find(i).image%>" title="allbum-name">
+								<img class="image" src="<%=@album.find(i).image%>" title="allbum-name">
+								<i class="glyphicon glyphicon-play-circle"></i>	
 							<% end %>
-							<a class="sing" style="font-size: 15px;" href="single.html"><%=@album.find(i).name%></a>
+							<a class="sing" style="font-size: 15px;"><%=@album.find(i).name%></a>
 						</div>
 						<%
 								end

@@ -16,18 +16,17 @@
         <div class="image-singer-song">
             <img class="rotate360" src="/<%=@artist.image%>" alt="<%=@artist.name%>">
             <div class="song-info-image">
-                <h3>Bài Hát: <%=@song.name%></h3>
-                <h3>Ca Sĩ: <%=@artist.name%></h3>
+                <h3>Album: <%=@album.name%></h3>
             </div>
         </div>
         <div class="play-song" style="background-image: url('/<%=@artist.image%>');"></div>
-        <audio controls autoplay class="audio-song">
+        <audio controls autoplay id="audioPlayer" class="audio-song">
             <source src="<%=@song.link%>" type="audio/ogg">
             <source src="" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         <div class="tool-song">
-            <ol>
+            <ol id="playlist">
                 <%
                     i = 0
                     while i < @songs.length
@@ -35,18 +34,20 @@
                         if @songs.find(i).album_id == @album.id
                 %>
                 <li>
-                    <div class="col-md-9">
-                        <%=@songs.find(i).name%>
-                    </div>
-                    <div class="col-md-3">
-                        <%=@artists.find(@songs.find(i).artist_id).name%>
-                    </div>
+                    <a href="<%=@songs.find(i).link%>">
+                        <div class="col-md-9">
+                            <%=@songs.find(i).name%>
+                        </div>
+                        <div class="col-md-3">
+                            <%=@artists.find(@songs.find(i).artist_id).name%>
+                        </div>
+                    </a>
                 </li>
                 <div class="line"></div>
                 <%
                         end
                     end
-                %>
+                %>  
             </ol>
         </div>
         <div class="lyric-song">

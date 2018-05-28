@@ -27,10 +27,11 @@
 										
                                         	<div class="top-artist-vn col-md-3 browse-grid" style="height: 220px; min-height: 220px;" >
 												<%= link_to(artist_path(i)) do %>
-													<img src="<%=@singer.find(i).image%>" title="allbum-name">
+													<img class="image" id src="<%=@singer.find(i).image%>" title="<%=@singer.find(i).name%>">
+													<i class="glyphicon glyphicon-play-circle"></i>
 												<%end%>
 												<%= link_to(artist_path(i)) do %>
-													<p><%=@singer.find(i).name%></p>
+													<p class="name"><%=@singer.find(i).name%></p>
 												<%end%>
                                        		</div>
                                     	
@@ -48,7 +49,8 @@
                                     %>
                                         <div class="all-artist-vn col-md-3 browse-grid" style="height: 220px; min-height: 220px;" >
                                             <%= link_to(artist_path(i)) do %>
-												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+												<img class="image" src="<%=@singer.find(i).image%>" title="<%=@singer.find(i).name%>">
+												<i class="glyphicon glyphicon-play-circle"></i>
 											<%end%>
 											<%= link_to(artist_path(i)) do %>
 												<p><%=@singer.find(i).name%></p>
@@ -87,7 +89,8 @@
                                     %>
                                         <div class="top-artist-us col-md-3 browse-grid" style="height: 220px; min-height: 220px;">
                                             <%= link_to(artist_path(i)) do %>
-												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+												<img class="image" src="<%=@singer.find(i).image%>" title="<%=@singer.find(i).name%>">
+												<i class="glyphicon glyphicon-play-circle"></i>
 											<%end%>
 											<%= link_to(artist_path(i)) do %>
 												<p><%=@singer.find(i).name%></p>
@@ -106,7 +109,8 @@
                                     %>
                                         <div class="all-artist-us col-md-3 browse-grid" style="height: 220px; min-height: 220px;">
                                             <%= link_to(artist_path(i)) do %>
-												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+												<img class="image" src="/<%=@singer.find(i).image%>" title="<%=@singer.find(i).name%>">
+												<i class="glyphicon glyphicon-play-circle"></i>
 											<%end%>
 											<%= link_to(artist_path(i)) do %>
 												<p><%=@singer.find(i).name%></p>
@@ -145,7 +149,8 @@
                                     %>
                                         <div class="top-artist-hq col-md-3 browse-grid" style="height: 220px; min-height: 220px;">
                                             <%= link_to(artist_path(i)) do %>
-												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+												<img class="image" src="<%=@singer.find(i).image%>" title="<%=@singer.find(i).name%>"/>
+												<i class="glyphicon glyphicon-play-circle"></i>
 											<%end%>
 											<%= link_to(artist_path(i)) do %>
 												<p><%=@singer.find(i).name%></p>
@@ -164,7 +169,8 @@
                                     %>
                                         <div class="all-artist-hq col-md-3 browse-grid" style="height: 220px; min-height: 220px;">
                                             <%= link_to(artist_path(i)) do %>
-												<img src="<%=@singer.find(i).image%>" title="allbum-name">
+												<img class="image" src="<%=@singer.find(i).image%>" title="<%=@singer.find(i).name%>"/>
+												<i class="glyphicon glyphicon-play-circle"></i>
 											<%end%>
 											<%= link_to(artist_path(i)) do %>
 												<p><%=@singer.find(i).name%></p>
@@ -197,7 +203,10 @@
 									i = i + 1 
 							%>
 							<li>
-								<a href="single.html"><img src="<%=@singer.find(i).image%>" alt=""/></a>
+								<%= link_to(artist_path(i)) do %>
+									<img class="image" src="<%=@singer.find(i).image%>" alt=""/>
+									<i class="glyphicon glyphicon-play-circle"></i>
+								<%end%>
 								<div class="slide-title"><h4><%=@singer.find(i).name%></h4></div>
 								<div class="date-city">
 									<h5><%=@singer.find(i).birthday%></h5>

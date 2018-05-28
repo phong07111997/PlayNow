@@ -1,0 +1,73 @@
+<div class="detail-kind">
+    <div class="left-detail-kind">
+        <div class="header-detail-kind">
+            <img height="295" src="/<%=@kind.image%>" alt="<%=@kind.name%>"/>
+            <p><%=@kind.description%></p>
+        </div>
+        <div class="content-left-kind">
+            <div class="title-left-detail-kind">
+                <h2>PLAYLIST</h2>
+            </div>
+            <div class="playlist-left-detail-kind">
+                <ul>
+                    <%
+                        @songs.each do |song|
+                            if song.kind_id == @kind.id
+                    %>
+                    <li>
+                        <%= link_to(chart_path(song.id)) do %>
+                            <div class="image-playlist-left-kind">
+                                <img src="/<%=@artist.find(song.artist_id).image%>"/>
+                                <i class="glyphicon glyphicon-play-circle"></i>
+                            </div>
+                        <%end%>
+                        <div class="info-playlist-left-kind">
+                            <%= link_to(chart_path(song.id)) do %>
+                                <h3><%=song.name%></h3>
+                            <%end%>
+                            <%= link_to(artist_path(song.artist_id)) do %>
+                                <p><%=@artist.find(song.artist_id).name%></p>
+                            <%end%>
+                        </div>
+                    </li>
+                    <%
+                            end
+                        end
+                    %>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right-detail-kind">
+        <div class="title-right-detail-kind">
+            <h2>CHỦ ĐỀ KHÁC</h2>
+        </div>
+        <div class="playlist-right-detail-kind">
+            <ul>
+                <%
+                    if @kinds.length < 5 
+                        j = @kinds.length
+                    else
+                        j = 5
+                    end
+                    i = 0
+                    @kinds.each do |kind|
+                        if kind.id != @kind.id && i < j
+                %>
+                <li>
+                    <%= link_to(kind_path(kind.id)) do %>
+                        <div class="image-playlist-right-kind">
+                            <img class="image-song-kind" src="/<%=kind.image%>" alt="<%=kind.name%>"/>
+                        </div>
+                    <%end%>
+                </li>
+                <%
+                            i = i + 1
+                        end
+                    end
+                %>
+            </ul>
+        </div>
+    </div>
+</div>

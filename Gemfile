@@ -32,7 +32,9 @@ gem 'jquery-rails'
 gem "haml-rails"
 gem 'devise'
 gem "activerecord-import"
-
+gem 'mysql2', "~> 0.4.4"
+gem 'sprockets-rails', :require => "sprockets/railtie"
+gem 'activerecord-import'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
